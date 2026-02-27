@@ -1,12 +1,12 @@
 # EduCloud Portal
 
-## 🚀 Project Overview
+## Project Overview
 Secure AWS + Linux based file portal for Trainers and Students.
 
-## 🏗 Architecture
+## Architecture
 <img width="1548" height="767" alt="diagrma" src="https://github.com/user-attachments/assets/f5152aa2-a6b8-45e9-a2c6-9c30d9dc55b2" /></br>
 
-## ☁ AWS Services Used
+##  AWS Services Used
 - VPC
 - EC2
 - S3
@@ -55,7 +55,7 @@ Student login.
 
 - It is alternative way so teacher would share secure files via NFS#####
 - 
-## 🔐 Linux Setup
+## Linux Setup
 
 User & Group Management
 
@@ -136,13 +136,3 @@ Cloudfront
 
 <img width="940" height="404" alt="image" src="https://github.com/user-attachments/assets/c3dc9f1d-0673-42cf-8573-6c39a3c9f729" /></br>
 
-
-
-
-
-## 📌 Key Features
-- Role-Based Access
-- Automated Backup to S3
-- Lifecycle Policy (90 days)
-- Log Monitoring
-- Secure File Sharing

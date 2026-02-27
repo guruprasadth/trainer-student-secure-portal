@@ -6,7 +6,7 @@ Secure AWS + Linux based file portal for Trainers and Students.
 ## Architecture
 <img width="1548" height="767" alt="diagrma" src="https://github.com/user-attachments/assets/f5152aa2-a6b8-45e9-a2c6-9c30d9dc55b2" /></br>
 
-##  AWS Services Used
+## AWS Services Used
 - VPC
 - EC2
 - S3
@@ -19,6 +19,7 @@ Secure AWS + Linux based file portal for Trainers and Students.
 - API Gateway
 
 ##AWS VPC Setup #########
+
 - Create VPC and 2 public and private subnet and route table associate subnet to route
 table.
 
@@ -27,6 +28,7 @@ table.
 <img width="940" height="461" alt="image" src="https://github.com/user-attachments/assets/5d46255e-744b-4391-a95d-8b3b4f1fcf44" />
 
 ##AWS EC2 Service Setup####
+
 -create a instance to deploy the front and backend 
 
 -here We deploy the frontend in the private ec2-instance in html directory and we access by using Elastic Load Balance(ELB) it has provide the DNS ID
@@ -54,26 +56,45 @@ Student login.
 ###here create a one public instance to perform the Linux Administrationoperations####
 
 - It is alternative way so teacher would share secure files via NFS#####
-- 
+  
 ## Linux Setup
 
-User & Group Management
+ User & Group Management
+
+-created directory materials,logs,assignment
+
+-create a user trainer1., trainer2, trainer3,students1,students2&support staff with password add them to a releated group called Trainer,Student&Support_staff
 
 <img width="1920" height="1080" alt="useradd" src="https://github.com/user-attachments/assets/1e114e49-683e-410b-9291-3012685661ce" /></br>
 
 ACL Permissions
 
+-Access control list defines that specific user can access the files
+
+-It explains that like trainer1 having only read and write permission for a /materials files
+
 <img width="1920" height="1080" alt="setfacl logs" src="https://github.com/user-attachments/assets/6b685e2e-eba7-4480-8f83-454808a81219" /></br>
 
-LVM Extension
+LVM Extension.
+
+-The existing partition is used more than 80 % we create on physical volume and attach to existing volume group and attach to the logical volume extend partition using (lvextend ).
 
 <img width="1920" height="1080" alt="pvextend-5g" src="https://github.com/user-attachments/assets/33ec06e9-758f-449e-b5f7-7043313ed6f1" /></br>
 
-LUKS Encryption
+LUKS Encryption.
+
+-In this project we encrypt the partation by using LUKS methoh
+
+-encrypt the sensitive_data directory so 
+
+-Foramate the directory using cryptsetup luksFormat /sensitive_data then open the cryptsetup luksOpen guru
 
 <img width="1920" height="1080" alt="crypt setup" src="https://github.com/user-attachments/assets/612add85-21c5-4814-8612-bf048388325b" /></br>
 
 LUKS mount
+
+-mount the directory to /sensitive_data
+
 <img width="1920" height="1080" alt="crypt-set2" src="https://github.com/user-attachments/assets/4f3c613b-ea52-45b1-9da6-5882826f4945" /></br>
 
 Cron Jobs
